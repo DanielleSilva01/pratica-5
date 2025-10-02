@@ -1,48 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Marque fotos</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Raleway">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="shortcut icon" href="img/camera.png">
-  </head>
-  <body>
-    <header>
-      <img src="img/camera-big.png" alt="Ícone de uma câmera">
-      <h1>PhotoSnap</h1>
-    </header>
-    <main>
-      <p>Veja as marcações que foram feitas na foto.</p>
-      <div class="linha">
-        <div class="foto-anotada">
-          <img src="img/pikachu-electrode.jpg">
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danielle Evangelista — Portfólio</title>
+  <link rel="stylesheet" href="Style/estilos.css">
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <h1 id="site-title">Danielle Evangelista</h1>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-          <!-- Estas são as marcações na foto que fazem mostrar um balãozinho -->
-          <div class="marcacao"
-            data-titulo="Pikachu"
-            data-conteudo="Este é o pokémon que solta choque do trovão!!"
-            style="width: 20px; height: 20px; top: 10px; left: 10px;"></div>
+  <main role="main">
 
-          <div class="marcacao"
-            data-titulo="Electrode"
-            data-conteudo="Este é uma pseudo-pokébola invertida"
-            style="width: 20px; height: 20px; top: 10px; left: 40px;"></div>
-
-        </div>
-
-        <!-- Este é o "balãozinho" -->
-        <div id="balaozinho">        
-        </div>
-        <div class="controles">
-          <label>x: <input type="number" value="300" id="marcacao-x"></label>
-          <label>y: <input type="number" value="50" id="marcacao-y"></label>
-          <label>largura: <input type="number" value="120" id="marcacao-largura"></label>
-          <label>altura: <input type="number" value="135" id="marcacao-altura"></label>
-          <button type="button" id="definir-marcacao">Definir Marcação</button>
-        </div>
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <img src="img/imagem.jpg" alt="Foto de Danielle Evangelista" class="foto-perfil">
+        <h2 id="hero-title">Descrição curta</h2>
+        <p>Danielle Evangelista da Silva, tenho 21 anos, faço Curso de SI na Newton Paiva.</p>
       </div>
-    </main>
-    <script src="balaozinho.js"></script>
-  </body>
+    </section>
+
+    <section id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <h2 id="sobre-title">Sobre mim</h2>
+        <p>
+          Formada em Redes de Computadores pelo CEFET-MG. Cursando Sistema de Informações pela Newton Paiva e já fiz curso de React + JS pela Unimy.
+        </p>
+        <h3>Habilidades</h3>
+        <ul>
+          <li>Front-end e back-end, HTML, JavaScript, Java, CSS, React, conhecimento sobre infraestrutura de TI, Banco de Dados (SQL)</li>
+        </ul>
+        <h3>Interesses</h3>
+        <p>Desenvolvimento Web</p>
+        <p>Desenvolvimento</p>
+      </div>
+    </section>
+
+    <section id="projetos" aria-labelledby="projetos-title">
+      <div class="container grid-projetos">
+        <h2 id="projetos-title">Projetos</h2>
+
+        <article class="projeto">
+          <h3>Súdito das Plantas</h3>
+          <p>Trabalho feito no primeiro ano do CEFET matéria Programação Web.</p>
+          <p><a href="#">Link: </a> | <a href="https://daniellesilva01.github.io/HTML-parte-1-trabalho/">Súdito das Plantas</a></p>
+        </article>
+
+        <article class="projeto">
+          <h3>Página com API</h3>
+          <p>Um projeto feito durante o curso de React + JS.</p>
+          <p><a href="#">Link: </a> | <a href="https://dani-filmes.netlify.app/">Prime Flix</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title">Contato</h2>
+
+        <address>
+          <p>Você pode me encontrar em:</p>
+          <ul>
+            <li>Email: <a href="mailto:danievan2005@gmail.com">danievan2005@gmail.com</a></li>
+            <li>GitHub: 
+              <a href="https://github.com/DanielleSilva01" target="_blank">
+                DanielleSilva01
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; Danielle Evangelista. Todos os direitos reservados.</p>
+      <p><a href="#">Política de privacidade</a> | <a href="#">Termos de uso</a></p>
+    </div>
+  </footer>
+
+  <button id="btn-topo" title="Voltar ao topo">↑</button>
+
+  <script src="Script/script.js"></script>
+</body>
 </html>
